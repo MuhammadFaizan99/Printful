@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Hero from "./component/Hero/Hero";
-import Element from "./element";
+import Element from "./Element";
 import Products from "./component/Products/Products";
 import Orders from "./component/Orders/Orders";
 import About from "./component/About/About";
