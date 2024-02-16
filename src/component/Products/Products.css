@@ -1,0 +1,210 @@
+/* Products.css */
+
+.product-container {
+  max-width: 1000px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 35px auto;
+  overflow-x: auto;
+}
+
+.product-container h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 100;
+  margin: 20px 0;
+  color: #333;
+  flex-grow: 1;
+}
+
+.no-products-text{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.add-products-button {
+  padding: 10px 20px;
+  background-color: rgb(65, 167, 65);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+.add-products-button:hover {
+  background-color: #031851;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.product-container th,
+.product-container td {
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-container th {
+  background-color: rgb(65, 167, 65);
+  color: #fff;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+}
+
+.main-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-button,
+.delete-button {
+  padding: 8px 15px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.update-button {
+  background-color: #007bff;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.update-button:hover,
+.delete-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button:hover {
+  background-color: rgb(186, 33, 33);
+}
+
+/* Transition Styles */
+.transition-entering,
+.transition-exiting {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.transition-entered {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Centered loader styles */
+.loader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  min-height: 200px;
+  font-size: 20px;
+  color: #333;
+}
+
+.loader i {
+  font-size: 24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: rgb(65, 167, 65);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.pagination button.active {
+  background-color: #031851;
+}
+
+@media (max-width: 700px) {
+  .product-container {
+    margin: 20px auto;
+    overflow-x: auto;
+  }
+  .product-container h1 {
+    font-size: 20px;
+  }
+  .product-container th,
+  .product-container td {
+    padding: 7px;
+  }
+  .add-products-button {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .main-button {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .update-button,
+  .delete-button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .product-container th:nth-child(2),
+  .product-container td:nth-child(2),
+  .product-container th:nth-child(5),
+  .product-container td:nth-child(5) {
+    display: none;
+  }
+}

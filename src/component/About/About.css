@@ -1,0 +1,68 @@
+/* About.css */
+
+.about-page {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Add styles for the transition effect */
+.about-page.transition-entering,
+.about-page.transition-exiting,
+.about-page.transition-exited {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about-page.transition-entered {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about-rozi {
+  padding: 50px 0;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.rozi-content {
+  margin: 0 60px;
+  text-align: left;
+}
+
+.rozi-content h2 {
+  font-size: 36px;
+  text-align: center;
+  color: rgb(65, 167, 65);
+  margin: 0;
+}
+
+.rozi-content p {
+  font-size: 18px;
+  text-align: justify;
+  color: #333333;
+  margin: 15px 0;
+}
+
+.about-page h1,
+.about-page h2 {
+  font-weight: bold;
+}
+
+/* Add media query for screens less than 700px wide */
+@media (max-width: 700px) {
+  .about-rozi {
+    margin-top: 20px;
+  }
+  .rozi-content {
+    padding: 0 20px;
+  }
+
+  .rozi-content h2 {
+    font-size: 20px;
+  }
+
+  .rozi-content p {
+    font-size: 20px;
+  }
+}
